@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Producto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Nuevo Producto</h1>
+        <form action="{{ url_for('nuevo') }}" method="POST">
+            Nombre: <input type="text" name="nombre" required><br>
+            Cantidad: <input type="number" name="cantidad" required><br>
+            Precio: <input type="number" name="precio" required step="0.01"><br>
+            Fecha de Vencimiento: <input type="date" name="fecha_vencimiento" required><br>
+            Categoría: <input type="text" name="categoria" required><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
